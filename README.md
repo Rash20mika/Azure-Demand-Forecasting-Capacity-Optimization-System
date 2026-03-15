@@ -5,6 +5,7 @@ This project focuses on building a predictive system to forecast Azure Compute a
 The objective is to support Azure Supply Chain teams in making informed capacity provisioning decisions, reducing both over-investment and under-investment in infrastructure.
 The solution leverages data science, feature engineering, and machine learning techniques to improve forecasting accuracy and optimize regional capacity allocation.
 
+Milestone1
 Expected Outcomes
 
 - Improved accuracy in Azure service demand forecasting
@@ -46,4 +47,52 @@ Dataset Attributes
 - Service_availability
 - Market_Trend_Index
 - Holiday_Flag
+
+Milestone 2 – Feature Engineering & Time-Series Preparation
+
+In this phase, the dataset was transformed into a machine learning-ready format.
+
+Time-Series Processing
+
+Converted Date_of_usage to datetime format
+Sorted dataset chronologically by:
+Azure_region
+Service_Type
+Date_of_usage
+
+Feature Engineering
+
+The following features were created:
+Lag Features
+lag_1 → Previous day demand
+lag_2 → Demand from two days ago
+Purpose: Helps model learn temporal dependency and usage patterns.
+
+Rolling Mean
+
+rolling_mean_3 → 3-day moving average
+Purpose: Reduces noise and captures demand trend.
+
+Spike Detection
+
+usage_spike (Binary Feature)
+1 → Unusual high demand
+0 → Normal demand
+Threshold = Mean + Standard Deviation
+Purpose: Supports anomaly detection and spike prediction modeling.
+
+Dataset Enhancement Output
+
+This dataset is:
+Chronologically ordered
+Feature engineered
+Validated
+
+Technology used:
+
+Pandas (groupby, rolling, shift)
+NumPy
+Time-series feature engineering
+Data preprocessing
+
 
