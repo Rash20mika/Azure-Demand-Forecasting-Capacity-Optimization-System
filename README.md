@@ -95,4 +95,40 @@ NumPy
 Time-series feature engineering
 Data preprocessing
 
+Milestone3:
 
+Models used
+ARIMA
+ARIMA is used as a time series forecasting model to predict `Demand_units` based on historical demand values.
+
+XGBoost Regressor
+XGBoost Regressor is used to predict `Demand_units` using multiple input features such as lag values, rolling mean, market trend, service availability, and other attributes.
+
+Performance metrics
+The following metrics were used to evaluate model performance:
+- RMSE (Root Mean Squared Error)
+- MAE (Mean Absolute Error)
+- R2 Score
+
+Results
+ARIMA
+- RMSE: 18.65
+- MAE: 14.62
+- R2 Score: 0.00058
+
+XGBoost Regressor
+- RMSE: 14.68
+- MAE: 11.26
+- R2 Score: 0.99157
+
+Inference
+From the comparison, XGBoost Regressor performed better than ARIMA for this dataset. It produced lower error values and a much higher R2 score, showing that it captured the relationship between input features and demand more effectively.
+
+Technologies used
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Statsmodels
+- XGBoost
