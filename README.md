@@ -132,3 +132,18 @@ Technologies used
 - Scikit-learn
 - Statsmodels
 - XGBoost
+
+Hyperparameters for XGBoost regressor
+
+1. n_estimators=200
+Number of trees in the model.
+2. learning_rate=0.05
+Controls how fast the model learns.
+3. max_depth=6
+Maximum depth of each decision tree.
+4. subsample=0.8
+Model uses only 80% of training rows for building each tree.
+5. colsample_bytree=0.8
+Model uses only 80% of features for each tree.
+6. random_state=42
+Fixes randomness so you get the same result each time.
