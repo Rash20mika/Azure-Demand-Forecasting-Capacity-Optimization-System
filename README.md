@@ -147,3 +147,28 @@ Model uses only 80% of training rows for building each tree.
 Model uses only 80% of features for each tree.
 6. random_state=42
 Fixes randomness so you get the same result each time.
+
+Milestone 4
+
+In this milestone, an interactive Streamlit dashboard was developed to present the forecasting results and data insights in a user-friendly manner. The dashboard was designed to simulate a real-time cloud monitoring interface for Azure demand analysis.
+
+Key Features Implemented
+- Built a Streamlit-based web application
+- Added sidebar filters for:
+  - Azure Region
+  - Service Type
+- Displayed KPI cards such as:
+  - Average Demand
+  - Average Cost
+  - Service Availability
+  - Total Records
+- Created interactive visualizations for:
+  - Demand Units over Time
+  - Average Demand by Region
+  - Average Demand by Service Type
+  - Rolling Mean Demand Trend
+- Integrated ARIMA and XGBoost model comparison
+- Visualized Actual vs Predicted Demand for both models
+
+Outcome
+This milestone improved the project by transforming the forecasting system into an interactive analytical dashboard, making it easier to interpret cloud demand behavior, compare model performance, and support decision-making for capacity optimization.
